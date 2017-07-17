@@ -173,7 +173,10 @@ module.exports = {
     loaders: [
       {test: /\.css$/, loader: &apos;style-loader!css-loader&apos;}
     ]
-  }
+  },
+  plugins: [
+    new webpack.BannerPlugin(&apos;This file is created by zhaoda&apos;)
+  ]
 }
 </code></pre></li>
 </ol>
