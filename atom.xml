@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="m1zne.github.io/"/>
-  <updated>2017-07-20T17:56:24.700Z</updated>
+  <updated>2017-07-20T17:57:51.768Z</updated>
   <id>m1zne.github.io/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="m1zne.github.io/2017/07/20/vue/"/>
     <id>m1zne.github.io/2017/07/20/vue/</id>
     <published>2017-07-20T02:22:31.000Z</published>
-    <updated>2017-07-20T17:56:24.700Z</updated>
+    <updated>2017-07-20T17:57:51.768Z</updated>
     
     <content type="html"><![CDATA[<h2 id="什么是Vue"><a href="#什么是Vue" class="headerlink" title="什么是Vue"></a>什么是Vue</h2><p>Vue.js是一套构建用户界面的渐进式框架。与其他重量级框架不同的是，Vue 采用自底向上增量开发的设计。Vue 的核心库只关注视图层，它不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与单文件组件和 Vue 生态系统支持的库结合使用时，Vue 也完全能够为复杂的单页应用程序提供驱动。</p>
 <h2 id="Vue-使用"><a href="#Vue-使用" class="headerlink" title="Vue 使用"></a>Vue 使用</h2><pre><code>npm install vue
