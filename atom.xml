@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>lizehua</title>
   <subtitle>[object Object]</subtitle>
-  <link href="//atom.xml" rel="self"/>
+  <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
-  <updated>2017-07-20T04:03:06.142Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="m1zne.github.io/"/>
+  <updated>2017-07-20T17:56:24.700Z</updated>
+  <id>m1zne.github.io/</id>
   
   <author>
     <name>Lizehua</name>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>vue</title>
-    <link href="http://yoursite.com/2017/07/20/vue/"/>
-    <id>http://yoursite.com/2017/07/20/vue/</id>
+    <link href="m1zne.github.io/2017/07/20/vue/"/>
+    <id>m1zne.github.io/2017/07/20/vue/</id>
     <published>2017-07-20T02:22:31.000Z</published>
-    <updated>2017-07-20T04:03:06.142Z</updated>
+    <updated>2017-07-20T17:56:24.700Z</updated>
     
     <content type="html"><![CDATA[<h2 id="什么是Vue"><a href="#什么是Vue" class="headerlink" title="什么是Vue"></a>什么是Vue</h2><p>Vue.js是一套构建用户界面的渐进式框架。与其他重量级框架不同的是，Vue 采用自底向上增量开发的设计。Vue 的核心库只关注视图层，它不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与单文件组件和 Vue 生态系统支持的库结合使用时，Vue 也完全能够为复杂的单页应用程序提供驱动。</p>
 <h2 id="Vue-使用"><a href="#Vue-使用" class="headerlink" title="Vue 使用"></a>Vue 使用</h2><pre><code>npm install vue
@@ -36,8 +36,8 @@ var app = new Vue({
   }
     })
 </code></pre>
-## 模版语法
-<pre><code>&lt;span&gt;Message: {{ msg }}&lt;/span&gt;
+
+<h2 id="模版语法"><a href="#模版语法" class="headerlink" title="模版语法"></a>模版语法</h2><pre><code>&lt;span&gt;Message: {{ msg }}&lt;/span&gt;
 <i>双大括号里msg显示的是对应数据对象上msg的值</i>
 var app = new Vue({
   el: &#39;#app&#39;,
@@ -71,9 +71,70 @@ var app = new Vue({
 &lt;!-- 缩写 --&gt;
 &lt;a @click=&quot;doSomething&quot;&gt;&lt;/a&gt;
 </code></pre>
+
+
 </li>
+</ul>
+<ul>
 <li><p>修饰符（Modifiers）是以半角句号 . 指明的特殊后缀，用于指出一个指令应该以特殊方式绑定。例如，<code>.prevent</code> 修饰符告诉 <code>v-on</code> 指令对于触发的事件调用 <code>event.preventDefault()</code>：</p>
-  <pre><code>&lt;form v-on:submit.prevent=&quot;onSubmit&quot;&gt;&lt;/form&gt;</code></pre></li>
+  <pre><code>&lt;form v-on:submit.prevent=&quot;onSubmit&quot;&gt;&lt;/form&gt;</code></pre>
+</li>
+<li><p><code>v-for</code> 指令根据一组数组的选项列表进行渲染，</p>
+<pre><code>&lt;ul id=&quot;example-1&quot;&gt;
+  &lt;li v-for=&quot;item in items&quot;&gt;
+    {{ item.message }}
+  &lt;/li&gt;
+&lt;/ul&gt;
+var example1 = new Vue({
+  el: &apos;#example-1&apos;,
+  data: {
+    items: [
+      {message: &apos;Foo&apos; },
+      {message: &apos;Bar&apos; }
+    ]
+  }
+})
+</code></pre></li>
+</ul>
+<h2 id="父子组件传值"><a href="#父子组件传值" class="headerlink" title="父子组件传值"></a>父子组件传值</h2><ul>
+<li><p>父组件 ==&gt; 子组件</p>
+<pre><code>//父组件先引入子组件所在的vue文件,
+import Child from &apos;./Child.vue&apos;
+
+//再通过components引入子组件
+  export default{
+  name:&apos;app&apos;,
+  data(){
+    return{
+      citys:[&apos;北京&apos;,&apos;上海&apos;,&apos;天津&apos;,&apos;重庆&apos;]
+    }
+  },
+  components:{ Child }  
+  }
+
+//在&lt;template&gt;中合适的位置放入Child,并传入值
+&lt;template&gt;
+&lt;Child :citys=&apos;citys&apos;&gt;&lt;/Child&gt;
+&lt;/template&gt;
+
+--------------------------------------------
+//子组件通过props属性来过去父组件传入的值
+props:{
+    citys:Array //设置好citys对应的数据类型
+}
+</code></pre></li>
+<li><p>子组件 ==&gt; 父组件</p>
+<pre><code>//父组件自定义函数
+&lt;template&gt;
+  &lt;Child @btnClick=&apos;clickHandler&apos;&gt;&lt;/Child&gt;
+&lt;/template&gt;
+//子组件通过 this.$emit 拿到父组件自定义函数
+liClick(){
+  this.$emit(&apos;btnClick&apos;,&apos;Change Parent`s msg&apos;)
+  // 第一个参数是触发 父级自定义的函数名
+  // 第二个参数 数据
+}
+</code></pre></li>
 </ul>
 ]]></content>
     
@@ -84,32 +145,14 @@ var app = new Vue({
     </summary>
     
     
-      <category term="框架" scheme="http://yoursite.com/tags/%E6%A1%86%E6%9E%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>about</title>
-    <link href="http://yoursite.com/2017/07/17/about/"/>
-    <id>http://yoursite.com/2017/07/17/about/</id>
-    <published>2017-07-17T03:38:56.000Z</published>
-    <updated>2017-07-17T03:39:23.168Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2>]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;关于我&quot;&gt;&lt;a href=&quot;#关于我&quot; class=&quot;headerlink&quot; title=&quot;关于我&quot;&gt;&lt;/a&gt;关于我&lt;/h2&gt;
-    
-    </summary>
-    
+      <category term="框架" scheme="m1zne.github.io/tags/%E6%A1%86%E6%9E%B6/"/>
     
   </entry>
   
   <entry>
     <title>React</title>
-    <link href="http://yoursite.com/2017/07/17/React/"/>
-    <id>http://yoursite.com/2017/07/17/React/</id>
+    <link href="m1zne.github.io/2017/07/17/React/"/>
+    <id>m1zne.github.io/2017/07/17/React/</id>
     <published>2017-07-17T02:39:53.000Z</published>
     <updated>2017-07-17T03:12:18.971Z</updated>
     
@@ -184,14 +227,14 @@ ReactDOM.render(
     </summary>
     
     
-      <category term="框架" scheme="http://yoursite.com/tags/%E6%A1%86%E6%9E%B6/"/>
+      <category term="框架" scheme="m1zne.github.io/tags/%E6%A1%86%E6%9E%B6/"/>
     
   </entry>
   
   <entry>
     <title>webpack</title>
-    <link href="http://yoursite.com/2017/07/17/webpack/"/>
-    <id>http://yoursite.com/2017/07/17/webpack/</id>
+    <link href="m1zne.github.io/2017/07/17/webpack/"/>
+    <id>m1zne.github.io/2017/07/17/webpack/</id>
     <published>2017-07-16T16:41:44.000Z</published>
     <updated>2017-07-17T02:41:21.344Z</updated>
     
@@ -259,14 +302,14 @@ module.exports = {
     </summary>
     
     
-      <category term="工具" scheme="http://yoursite.com/tags/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="m1zne.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
     
   </entry>
   
   <entry>
     <title>html语义化</title>
-    <link href="http://yoursite.com/2017/05/15/html%E8%AF%AD%E4%B9%89%E5%8C%96-0/"/>
-    <id>http://yoursite.com/2017/05/15/html语义化-0/</id>
+    <link href="m1zne.github.io/2017/05/15/html%E8%AF%AD%E4%B9%89%E5%8C%96-0/"/>
+    <id>m1zne.github.io/2017/05/15/html语义化-0/</id>
     <published>2017-05-15T02:53:08.000Z</published>
     <updated>2017-05-25T03:35:07.136Z</updated>
     
