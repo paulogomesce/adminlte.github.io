@@ -10,14 +10,7 @@
 
     <!--Description-->
     
-        <meta name="description" content="什么是React
-React 是一个用于构建用户界面的 JAVASCRIPT 库。
-
-React主要用于构建UI，很多人认为 React 是 MVC 中的 V（视图）。
-
-React 起源于 Facebook 的内部项目，用来架设 Instagram 的网站，并于 2013 年 5 月开源。
-
-Re">
+        <meta name="description" content="什么是VueVue.js是一套构建用户界面的渐进式框架。与其他重量级框架不同的是，Vue 采用自底向上增量开发的设计。Vue 的核心库只关注视图层，它不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与单文件组件和 Vue 生态系统支持的库结合使用时，Vue 也完全能够为复杂的单页应用程序提">
     
 
     <!--Author-->
@@ -27,7 +20,7 @@ Re">
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="React"/>
+        <meta property="og:title" content="vue"/>
     
 
     <!--Open Graph Site Name-->
@@ -40,7 +33,7 @@ Re">
 
     <!-- Title -->
     
-    <title>React - lizehua</title>
+    <title>vue - lizehua</title>
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/sass/main.css">
@@ -117,9 +110,9 @@ Re">
                 <!-- Main Content -->
                 
 
-    <h1 class="title">React</h1>
+    <h1 class="title">vue</h1>
     <div class="meta">
-        2017-07-17
+        2017-07-20
     </div>
 
 
@@ -128,65 +121,57 @@ Re">
 
 
 <!-- Content -->
-<h2 id="什么是React"><a href="#什么是React" class="headerlink" title="什么是React"></a>什么是React</h2><ul>
-<li><p>React 是一个用于构建用户界面的 JAVASCRIPT 库。</p>
-</li>
-<li><p>React主要用于构建UI，很多人认为 React 是 MVC 中的 V（视图）。</p>
-</li>
-<li><p>React 起源于 Facebook 的内部项目，用来架设 Instagram 的网站，并于 2013 年 5 月开源。</p>
-</li>
-<li><p>React 拥有较高的性能，代码逻辑非常简单，越来越多的人已开始关注和使用它。</p>
+<h2 id="什么是Vue"><a href="#什么是Vue" class="headerlink" title="什么是Vue"></a>什么是Vue</h2><p>Vue.js是一套构建用户界面的渐进式框架。与其他重量级框架不同的是，Vue 采用自底向上增量开发的设计。Vue 的核心库只关注视图层，它不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与单文件组件和 Vue 生态系统支持的库结合使用时，Vue 也完全能够为复杂的单页应用程序提供驱动。</p>
+<h2 id="Vue-使用"><a href="#Vue-使用" class="headerlink" title="Vue 使用"></a>Vue 使用</h2><pre><code>$ npm install vue
+引入并使用vue
+</code></pre><h2 id="声明式渲染"><a href="#声明式渲染" class="headerlink" title="声明式渲染"></a>声明式渲染</h2><p>Vue.js 的核心是一个允许采用简洁的模板语法来声明式的将数据渲染进 DOM：</p>
+<pre><code>&lt;div id=&quot;app&quot;&gt;
+  {{ message }}
+&lt;/div&gt;
+var app = new Vue({
+  el: &#39;#app&#39;,
+  data: {
+    message: &#39;Hello Vue!&#39;
+  }
+    })
+</code></pre>
+## 模版语法
+<pre><code>&lt;span&gt;Message: {{ msg }}&lt;/span&gt;
+<i>双大括号里msg显示的是对应数据对象上msg的值</i>
+var app = new Vue({
+  el: &#39;#app&#39;,
+  data: {
+    msg: &#39;Hello Vue!&#39;
+      }
+  })
+</code></pre>
+
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><ul>
+<li><code>v-html</code>这个 div 的内容将会被替换成为属性值 rawHtml，直接作为 HTML —— 数据绑定会被忽略  <pre><code>&lt;div v-html=&quot;rawHtml&quot;&gt;&lt;/div&gt;</code></pre>
+
+
 </li>
 </ul>
-<h2 id="React-特点"><a href="#React-特点" class="headerlink" title="React 特点"></a>React 特点</h2><ol>
-<li>声明式设计 −React采用声明范式，可以轻松描述应用。</li>
-<li>高效 −React通过对DOM的模拟，最大限度地减少与DOM的交互。</li>
-<li>灵活 −React可以与已知的库或框架很好地配合。</li>
-<li>JSX − JSX 是 JavaScript 语法的扩展。React 开发不一定使用 JSX ，但我们建议使用它。</li>
-<li>组件 − 通过 React 构建组件，使得代码更加容易得到复用，能够很好的应用在大项目的开发中。</li>
-<li>单向响应的数据流 − React 实现了单向响应的数据流，从而减少了重复代码，这也是它为什么比传统数据绑定更简单。</li>
-</ol>
-<h2 id="Webpack使用"><a href="#Webpack使用" class="headerlink" title="Webpack使用"></a>Webpack使用</h2><p>Create React App 是开始构建新的 React 单页面应用的最佳途径。 它可以帮你配置开发环境，以便你可以使用最新的 JavaScript 特性，还能提供很棒的开发体验，并为生产环境优化你的应用</p>
-<pre><code>npm install -g create-react-app
-create-react-app my-app
-
-cd my-app
-npm start
-</code></pre><p>学习react之前的一些前置的概念</p>
-<blockquote>
-<p>一个核心思想——组件化</p>
-<p>两位带头大哥——react &amp; react-dom</p>
-<p>一个基本运作方式——数据驱动视图</p>
-<p>一位神秘卧底——jsx语法</p>
-<p>三位护法——state（状态）、props（属性）、refs（实例）</p>
-<p>一群打杂小弟——生命周期</p>
-</blockquote>
-<p>react实例</p>
-<p><em>ReactDOM.render() 有两个参数,  第一个参数必须是闭合标签,表示渲染的元素 第二个参数是渲染的位置</em></p>
-<pre><code>import React from &apos;react&apos;
-import ReactDOM from &apos;react-dom&apos;
-import &apos;./index.css&apos;
-import UI from &apos;./components/UI&apos;
-import App from &apos;./app&apos;
-
-ReactDOM.render(
-    &lt;div&gt;
-    &lt;h1&gt;default React&lt;/h1&gt;
-    &lt;UI /&gt;
-    &lt;App /&gt;
-    &lt;/div&gt;
-    ,document.querySelector(&apos;#root&apos;))
-</code></pre><p>要想修改state 必须通过setstate</p>
-<p><strong>注意</strong>:</p>
 <ul>
-<li><p>事件的绑定,在react中必须保证this的指向永远的指向当前的组件对象</p>
+<li><p><code>v-if</code> 指令将根据表达式 seen 的值的真假来移除/插入 <code>&lt;p&gt;</code> 元素。</p>
+  <pre><code>&lt;p v-if=&quot;seen&quot;&gt;Now you see me&lt;/p&gt;</code></pre>
 </li>
-<li><p>所有在constructor()方法中先将事件绑定</p>
+<li><p><code>v-bind</code> 指令被用来响应地更新 HTML 属性</p>
+  <pre><code>&lt;!-- 完整语法 --&gt;
+&lt;a v-bind:href=&quot;url&quot;&gt;&lt;/a&gt;
+&lt;!-- 缩写 --&gt;
+&lt;a :href=&quot;url&quot;&gt;&lt;/a&gt;
+</code></pre>
 </li>
-<li><p>this.timehandler = this.timehandler.bind(this)</p>
+<li><p><code>v-on</code> 指令，它用于监听 DOM 事件：</p>
+  <pre><code>&lt;!-- 完整语法 --&gt;
+&lt;a v-on:click=&quot;doSomething&quot;&gt;
+&lt;!-- 缩写 --&gt;
+&lt;a @click=&quot;doSomething&quot;&gt;&lt;/a&gt;
+</code></pre>
 </li>
-<li><p>永远记得:在react中只要有事件绑定 上面这种写法是固定写法</p>
-</li>
+<li><p>修饰符（Modifiers）是以半角句号 . 指明的特殊后缀，用于指出一个指令应该以特殊方式绑定。例如，<code>.prevent</code> 修饰符告诉 <code>v-on</code> 指令对于触发的事件调用 <code>event.preventDefault()</code>：</p>
+  <pre><code>&lt;form v-on:submit.prevent=&quot;onSubmit&quot;&gt;&lt;/form&gt;</code></pre></li>
 </ul>
 
 
