@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>lizehua</title>
+  <subtitle>[object Object]</subtitle>
+  <link href="//atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2017-07-20T04:03:06.142Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Lizehua</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue</title>
+    <link href="http://yoursite.com/2017/07/20/vue/"/>
+    <id>http://yoursite.com/2017/07/20/vue/</id>
+    <published>2017-07-20T02:22:31.000Z</published>
+    <updated>2017-07-20T04:03:06.142Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是Vue"><a href="#什么是Vue" class="headerlink" title="什么是Vue"></a>什么是Vue</h2><p>Vue.js是一套构建用户界面的渐进式框架。与其他重量级框架不同的是，Vue 采用自底向上增量开发的设计。Vue 的核心库只关注视图层，它不仅易于上手，还便于与第三方库或既有项目整合。另一方面，当与单文件组件和 Vue 生态系统支持的库结合使用时，Vue 也完全能够为复杂的单页应用程序提供驱动。</p>
+<h2 id="Vue-使用"><a href="#Vue-使用" class="headerlink" title="Vue 使用"></a>Vue 使用</h2><pre><code>npm install vue
+//引入并使用vue
+</code></pre><h2 id="声明式渲染"><a href="#声明式渲染" class="headerlink" title="声明式渲染"></a>声明式渲染</h2><p>Vue.js 的核心是一个允许采用简洁的模板语法来声明式的将数据渲染进 DOM：</p>
+<pre><code>&lt;div id=&quot;app&quot;&gt;
+  {{ message }}
+&lt;/div&gt;
+var app = new Vue({
+  el: &#39;#app&#39;,
+  data: {
+    message: &#39;Hello Vue!&#39;
+  }
+    })
+</code></pre>
+## 模版语法
+<pre><code>&lt;span&gt;Message: {{ msg }}&lt;/span&gt;
+<i>双大括号里msg显示的是对应数据对象上msg的值</i>
+var app = new Vue({
+  el: &#39;#app&#39;,
+  data: {
+    msg: &#39;Hello Vue!&#39;
+      }
+  })
+</code></pre>
+
+<h2 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h2><ul>
+<li><p><code>v-html</code>这个 div 的内容将会被替换成为属性值 rawHtml，直接作为 HTML —— 数据绑定会被忽略</p>
+  <pre><code>&lt;div v-html=&quot;rawHtml&quot;&gt;&lt;/div&gt;</code></pre>
+
+
+</li>
+</ul>
+<ul>
+<li><p><code>v-if</code> 指令将根据表达式 seen 的值的真假来移除/插入 <code>&lt;p&gt;</code> 元素。</p>
+  <pre><code>&lt;p v-if=&quot;seen&quot;&gt;Now you see me&lt;/p&gt;</code></pre>
+</li>
+<li><p><code>v-bind</code> 指令被用来响应地更新 HTML 属性</p>
+  <pre><code>&lt;!-- 完整语法 --&gt;
+&lt;a v-bind:href=&quot;url&quot;&gt;&lt;/a&gt;
+&lt;!-- 缩写 --&gt;
+&lt;a :href=&quot;url&quot;&gt;&lt;/a&gt;
+</code></pre>
+</li>
+<li><p><code>v-on</code> 指令，它用于监听 DOM 事件：</p>
+  <pre><code>&lt;!-- 完整语法 --&gt;
+&lt;a v-on:click=&quot;doSomething&quot;&gt;
+&lt;!-- 缩写 --&gt;
+&lt;a @click=&quot;doSomething&quot;&gt;&lt;/a&gt;
+</code></pre>
+</li>
+<li><p>修饰符（Modifiers）是以半角句号 . 指明的特殊后缀，用于指出一个指令应该以特殊方式绑定。例如，<code>.prevent</code> 修饰符告诉 <code>v-on</code> 指令对于触发的事件调用 <code>event.preventDefault()</code>：</p>
+  <pre><code>&lt;form v-on:submit.prevent=&quot;onSubmit&quot;&gt;&lt;/form&gt;</code></pre></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;什么是Vue&quot;&gt;&lt;a href=&quot;#什么是Vue&quot; class=&quot;headerlink&quot; title=&quot;什么是Vue&quot;&gt;&lt;/a&gt;什么是Vue&lt;/h2&gt;&lt;p&gt;Vue.js是一套构建用户界面的渐进式框架。与其他重量级框架不同的是，Vue 采用自底向上增量开发的设计。V
+    
+    </summary>
+    
+    
+      <category term="框架" scheme="http://yoursite.com/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>about</title>
+    <link href="http://yoursite.com/2017/07/17/about/"/>
+    <id>http://yoursite.com/2017/07/17/about/</id>
+    <published>2017-07-17T03:38:56.000Z</published>
+    <updated>2017-07-17T03:39:23.168Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;关于我&quot;&gt;&lt;a href=&quot;#关于我&quot; class=&quot;headerlink&quot; title=&quot;关于我&quot;&gt;&lt;/a&gt;关于我&lt;/h2&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>React</title>
+    <link href="http://yoursite.com/2017/07/17/React/"/>
+    <id>http://yoursite.com/2017/07/17/React/</id>
+    <published>2017-07-17T02:39:53.000Z</published>
+    <updated>2017-07-17T03:12:18.971Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是React"><a href="#什么是React" class="headerlink" title="什么是React"></a>什么是React</h2><ul>
+<li><p>React 是一个用于构建用户界面的 JAVASCRIPT 库。</p>
+</li>
+<li><p>React主要用于构建UI，很多人认为 React 是 MVC 中的 V（视图）。</p>
+</li>
+<li><p>React 起源于 Facebook 的内部项目，用来架设 Instagram 的网站，并于 2013 年 5 月开源。</p>
+</li>
+<li><p>React 拥有较高的性能，代码逻辑非常简单，越来越多的人已开始关注和使用它。</p>
+</li>
+</ul>
+<h2 id="React-特点"><a href="#React-特点" class="headerlink" title="React 特点"></a>React 特点</h2><ol>
+<li>声明式设计 −React采用声明范式，可以轻松描述应用。</li>
+<li>高效 −React通过对DOM的模拟，最大限度地减少与DOM的交互。</li>
+<li>灵活 −React可以与已知的库或框架很好地配合。</li>
+<li>JSX − JSX 是 JavaScript 语法的扩展。React 开发不一定使用 JSX ，但我们建议使用它。</li>
+<li>组件 − 通过 React 构建组件，使得代码更加容易得到复用，能够很好的应用在大项目的开发中。</li>
+<li>单向响应的数据流 − React 实现了单向响应的数据流，从而减少了重复代码，这也是它为什么比传统数据绑定更简单。</li>
+</ol>
+<h2 id="Webpack使用"><a href="#Webpack使用" class="headerlink" title="Webpack使用"></a>Webpack使用</h2><p>Create React App 是开始构建新的 React 单页面应用的最佳途径。 它可以帮你配置开发环境，以便你可以使用最新的 JavaScript 特性，还能提供很棒的开发体验，并为生产环境优化你的应用</p>
+<pre><code>npm install -g create-react-app
+create-react-app my-app
+
+cd my-app
+npm start
+</code></pre><p>学习react之前的一些前置的概念</p>
+<blockquote>
+<p>一个核心思想——组件化</p>
+<p>两位带头大哥——react &amp; react-dom</p>
+<p>一个基本运作方式——数据驱动视图</p>
+<p>一位神秘卧底——jsx语法</p>
+<p>三位护法——state（状态）、props（属性）、refs（实例）</p>
+<p>一群打杂小弟——生命周期</p>
+</blockquote>
+<p>react实例</p>
+<p><em>ReactDOM.render() 有两个参数,  第一个参数必须是闭合标签,表示渲染的元素 第二个参数是渲染的位置</em></p>
+<pre><code>import React from &apos;react&apos;
+import ReactDOM from &apos;react-dom&apos;
+import &apos;./index.css&apos;
+import UI from &apos;./components/UI&apos;
+import App from &apos;./app&apos;
+
+ReactDOM.render(
+    &lt;div&gt;
+    &lt;h1&gt;default React&lt;/h1&gt;
+    &lt;UI /&gt;
+    &lt;App /&gt;
+    &lt;/div&gt;
+    ,document.querySelector(&apos;#root&apos;))
+</code></pre><p>要想修改state 必须通过setstate</p>
+<p><strong>注意</strong>:</p>
+<ul>
+<li><p>事件的绑定,在react中必须保证this的指向永远的指向当前的组件对象</p>
+</li>
+<li><p>所有在constructor()方法中先将事件绑定</p>
+</li>
+<li><p>this.timehandler = this.timehandler.bind(this)</p>
+</li>
+<li><p>永远记得:在react中只要有事件绑定 上面这种写法是固定写法</p>
+</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;什么是React&quot;&gt;&lt;a href=&quot;#什么是React&quot; class=&quot;headerlink&quot; title=&quot;什么是React&quot;&gt;&lt;/a&gt;什么是React&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;React 是一个用于构建用户界面的 JAVASCRIPT 库。&lt;/p&gt;
+
+    
+    </summary>
+    
+    
+      <category term="框架" scheme="http://yoursite.com/tags/%E6%A1%86%E6%9E%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>webpack</title>
+    <link href="http://yoursite.com/2017/07/17/webpack/"/>
+    <id>http://yoursite.com/2017/07/17/webpack/</id>
+    <published>2017-07-16T16:41:44.000Z</published>
+    <updated>2017-07-17T02:41:21.344Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="什么是Webpack"><a href="#什么是Webpack" class="headerlink" title="什么是Webpack"></a>什么是Webpack</h2><p>Webpack 是一个模块打包器。它将根据模块的依赖关系进行静态分析，然后将这些模块按照指定的规则生成对应的静态资源。</p>
+<p>##Webpack 的特点</p>
+<p>Webpack 和其他模块化工具有什么区别呢？</p>
+<ul>
+<li>代码拆分</li>
+</ul>
+<p>Webpack 有两种组织模块依赖的方式，同步和异步。异步依赖作为分割点，形成一个新的块。在优化了依赖树后，每一个异步区块都作为一个文件被打包。</p>
+<ul>
+<li>Loader</li>
+</ul>
+<p>Webpack 本身只能处理原生的 JavaScript 模块，但是 loader 转换器可以将各种类型的资源转换成 JavaScript 模块。这样，任何资源都可以成为 Webpack 可以处理的模块。</p>
+<ul>
+<li>智能解析</li>
+</ul>
+<p>Webpack 有一个智能解析器，几乎可以处理任何第三方库，无论它们的模块形式是 CommonJS、 AMD 还是普通的 JS 文件。甚至在加载依赖的时候，允许使用动态表达式 require(“./templates/“ + name + “.jade”)。</p>
+<ul>
+<li>插件系统</li>
+</ul>
+<p>Webpack 还有一个功能丰富的插件系统。大多数内容功能都是基于这个插件系统运行的，还可以开发和使用开源的 Webpack 插件，来满足各式各样的需求。</p>
+<ul>
+<li>快速运行</li>
+</ul>
+<p>Webpack 使用异步 I/O 和多级缓存提高运行效率，这使得 Webpack 能够以令人难以置信的速度快速增量编译。</p>
+<h2 id="Webpack使用"><a href="#Webpack使用" class="headerlink" title="Webpack使用"></a>Webpack使用</h2><pre><code>npm install webpack -g
+# 进入项目目录
+# 确定已经有 package.json，没有就通过 npm init 创建
+# 安装 webpack 依赖
+npm install webpack --save-dev
+</code></pre><p>如果需要使用 Webpack 开发工具，要单独安装：</p>
+<pre><code>npm install webpack-dev-server --save-dev
+</code></pre><ol>
+<li><p>创建配置文件</p>
+<pre><code>var webpack = require(&apos;webpack&apos;)
+
+module.exports = {
+  entry: &apos;./entry.js&apos;,
+  output: {
+    path: __dirname,
+    filename: &apos;bundle.js&apos;
+  },
+  module: {
+    loaders: [
+      {test: /\.css$/, loader: &apos;style-loader!css-loader&apos;}
+    ]
+  },
+  plugins: [
+    new webpack.BannerPlugin(&apos;This file is created by zhaoda&apos;)
+  ]
+}
+</code></pre></li>
+<li><p>运行webpack打包文件</p>
+<pre><code>$ webpack-dev-server --progress --colors 
+# 访问localhost:8080查看效果
+</code></pre></li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;什么是Webpack&quot;&gt;&lt;a href=&quot;#什么是Webpack&quot; class=&quot;headerlink&quot; title=&quot;什么是Webpack&quot;&gt;&lt;/a&gt;什么是Webpack&lt;/h2&gt;&lt;p&gt;Webpack 是一个模块打包器。它将根据模块的依赖关系进行静态分析，然后将
+    
+    </summary>
+    
+    
+      <category term="工具" scheme="http://yoursite.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>html语义化</title>
+    <link href="http://yoursite.com/2017/05/15/html%E8%AF%AD%E4%B9%89%E5%8C%96-0/"/>
+    <id>http://yoursite.com/2017/05/15/html语义化-0/</id>
+    <published>2017-05-15T02:53:08.000Z</published>
+    <updated>2017-05-25T03:35:07.136Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="HTML语义化"><a href="#HTML语义化" class="headerlink" title="HTML语义化"></a>HTML语义化</h2><h3 id="1）何为语义化"><a href="#1）何为语义化" class="headerlink" title="1）何为语义化"></a>1）何为语义化</h3><blockquote>
+<p>在合适的地方使用合适的标签</p>
+</blockquote>
+<p>语义化的含义就是用正确的标签做正确的事情，HTML语义化是指根据内容的结构选择合适的标签，也就是根据网页内容将代码语义化。</p>
+<p>HTML标签语义化是Web网页标准化的重要一环，也是标准制定时的重要这几原则。HTML5新增加的很多标签(如：<code>&lt;article&gt;、&lt;nav&gt;、&lt;header&gt;和&lt;footer&gt;</code>等)就是基于这样的设计原则。</p>
+<h3 id="2）检验标准"><a href="#2）检验标准" class="headerlink" title="2）检验标准"></a>2）检验标准</h3><p>浏览器会对语义化的标签设计默认的样式，所以验证页面是否予以规范的一个简单方式就是去掉CSS样式后页面还能正常阅读。</p>
+<h3 id="3）优点"><a href="#3）优点" class="headerlink" title="3）优点"></a>3）优点</h3><ul>
+<li><p>有利于搜索引擎以及爬虫工具等更容易读懂页面代码。因为机器不会关注页面实际渲染的外观，爬虫是依赖于标签来确定上下文和各个关键字的权重，只会关注页面内容本身，页面渲染的漂亮与否对机器识别毫无帮助</p>
+</li>
+<li><p>语义化的HTML在没有CSS的情况下也能呈现较好的内容结构与代码结构。HTML标签是页面内容的载体，语义化的标签相对于是对所包含内容的一个整体声明，也使得页面整体结构清晰。</p>
+</li>
+<li><p>便于团队开发和维护</p>
+</li>
+<li><p>便于开发者阅读和写出更优雅的代码。使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。</p>
+</li>
+</ul>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank" rel="external"><strong>附HTML5 标签列表</strong></a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;HTML语义化&quot;&gt;&lt;a href=&quot;#HTML语义化&quot; class=&quot;headerlink&quot; title=&quot;HTML语义化&quot;&gt;&lt;/a&gt;HTML语义化&lt;/h2&gt;&lt;h3 id=&quot;1）何为语义化&quot;&gt;&lt;a href=&quot;#1）何为语义化&quot; class=&quot;headerlink
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
