@@ -311,7 +311,7 @@ module.exports = {
     <link href="m1zne.github.io/2017/05/15/html%E8%AF%AD%E4%B9%89%E5%8C%96-0/"/>
     <id>m1zne.github.io/2017/05/15/html语义化-0/</id>
     <published>2017-05-15T02:53:08.000Z</published>
-    <updated>2017-05-25T03:35:07.136Z</updated>
+    <updated>2017-07-23T14:16:56.155Z</updated>
     
     <content type="html"><![CDATA[<h2 id="HTML语义化"><a href="#HTML语义化" class="headerlink" title="HTML语义化"></a>HTML语义化</h2><h3 id="1）何为语义化"><a href="#1）何为语义化" class="headerlink" title="1）何为语义化"></a>1）何为语义化</h3><blockquote>
 <p>在合适的地方使用合适的标签</p>
@@ -326,7 +326,7 @@ module.exports = {
 </li>
 <li><p>便于团队开发和维护</p>
 </li>
-<li><p>便于开发者阅读和写出更优雅的代码。使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解。</p>
+<li><p>便于开发者阅读和写出更优雅的代码。使阅读源代码的人对网站更容易将网站分块，便于阅读维护理解.</p>
 </li>
 </ul>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank" rel="external"><strong>附HTML5 标签列表</strong></a></p>
